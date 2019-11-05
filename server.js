@@ -8,7 +8,7 @@ const port = process.env.PORT || 4000;
 var app = express();
 
 //Serve static content for the app from the "public" directory in the application directory.
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + "/public"));
 
 //Parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -26,7 +26,7 @@ app.set("view engine", "handlebars");
 var routes = require("./controllers/burgersController.js");
 
 app.use(routes);
-
+const appp = 0;
 //App is listening...
 app.listen(port, function() {
   console.log("App now listening at localhost:" + port);
