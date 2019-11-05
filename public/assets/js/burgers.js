@@ -38,7 +38,7 @@ $(function() {
       location.reload();
     });
   });
-  const burerr = 0;
+
   //Click event for "Devour me" button.
   $(".change-devour").on("click", function(event) {
     var id = $(this).data("id");
