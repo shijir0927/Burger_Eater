@@ -1,0 +1,27 @@
+{
+  "name": "Burger-Eater",
+  "version": "1.0.0",
+  "description": "A virtual burger eating application utilizing handlebars, express.js, node.js, and the MVC architecture",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FredsGitHubAccount/Burger-Eater.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FredsGitHubAccount/Burger-Eater/issues"
+  },
+  "homepage": "https://github.com/FredsGitHubAccount/Burger-Eater#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "mysql": "^2.17.1"
+  }
+}

@@ -1,0 +1,30 @@
+#devoured-card-header  {
+    background-color: #ca341f;
+}
+
+.jumbotron {
+    margin-top: 20px;
+}
+.devoured-burger-name {
+    color: #ca341f;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#app-title {
+    font-size: 88px;
+}
+
+
+.lead {
+    font-size: 30px;
+}
+
+body {
+    background-image: url("/assets/img/burger.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
