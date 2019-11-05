@@ -25,7 +25,7 @@ router.post("/api/burgers", function(req, res) {
     }
   );
 });
-const asss = 0;
+
 //PUT route to update burger devoured state.
 router.put("/api/burgers/:id", function(req, res) {
   let condition = "id = " + req.params.id;
