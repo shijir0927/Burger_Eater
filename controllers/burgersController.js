@@ -5,7 +5,7 @@ let burger = require("../models/burger.js");
 //GET route to get burgers from database.
 router.get("/", function(req, res) {
   burger.all(function(data) {
-    console.log("controller call")
+    console.log("controller call");
     let hbsObject = {
       burgers: data
     };
@@ -16,31 +16,35 @@ router.get("/", function(req, res) {
 
 //POST route to create/add a burger.
 router.post("/api/burgers", function(req, res) {
-  burger.create([
-    "burger_name", "devoured"
-  ], [
-    req.body.burger_name, req.body.devoured
-  ], function(result) {
-    // Send back the ID of the new quote
-    res.json({ id: result.insertId });
-  });
+  burger.create(
+    ["burger_name", "devoured"],
+    [req.body.burger_name, req.body.devoured],
+    function(result) {
+      // Send back the ID of the new quote
+      res.json({ id: result.insertId });
+    }
+  );
 });
-
+const asss = 0;
 //PUT route to update burger devoured state.
 router.put("/api/burgers/:id", function(req, res) {
   let condition = "id = " + req.params.id;
 
   console.log("condition", condition);
 
-  burger.update({
-    devoured: req.body.devoured
-  }, condition, function(result) {
-    if (result.changedRows == 0) {
-      return res.status(404).end();
-    } else {
-      res.status(200).end();
+  burger.update(
+    {
+      devoured: req.body.devoured
+    },
+    condition,
+    function(result) {
+      if (result.changedRows == 0) {
+        return res.status(404).end();
+      } else {
+        res.status(200).end();
+      }
     }
-  });
+  );
 });
 
 //DELETE route to throw away a burger.
@@ -56,7 +60,5 @@ router.delete("/api/burgers/:id", function(req, res) {
   });
 });
 
-
 // Export routes for server.js to use.
 module.exports = router;
-
